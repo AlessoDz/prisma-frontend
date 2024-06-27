@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-action-list class="sidebar">
+        <div mat-subheader>Menu</div>
+        <button routerLink="/administrator" mat-list-item>
+            <mat-icon mat-list-icon>home</mat-icon> Inicio
+        </button>
+        <button mat-list-item routerLink="/administrator/profile">
+            <mat-icon mat-list-icon>account_circle</mat-icon> Perfil
+        </button>
+        <button mat-list-item routerLink="/administrator/matriculas">
+            <mat-icon mat-list-icon>list</mat-icon> Matrículas
+        </button>
+        <button mat-list-item routerLink="/administrator/add-teacher">
+            <mat-icon mat-list-icon>add_circle_outline</mat-icon> Agregar Docente
+        </button>
+        <button mat-list-item routerLink="/administrator/add-alumno">
+            <mat-icon mat-list-icon>add_circle_outline</mat-icon> Agregar Alumno
+        </button>
+        <button mat-list-item (click)="logout()">
+            <mat-icon mat-list-icon>logout</mat-icon> Salir
+        </button>
+    </mat-action-list>
+</mat-card>

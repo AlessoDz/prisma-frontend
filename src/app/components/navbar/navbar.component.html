@@ -1,0 +1,16 @@
+<nav class="flex items-center justify-between lg:px-40 lg:h-[100px]">
+  <a [routerLink]="'/'" class="flex items-center gap-7">
+    <img src="/img/prisma-logo.png" alt="logo">
+    <h1 class="text-2xl font-black text-heath-900">I.E.P. PRISMA</h1>
+  </a>
+  <div class="flex items-center gap-12 font-medium uppercase" style="font-family: Poppins;">
+    <a [routerLink]="'/'" class="text-lg hover:text-heath-700">Inicio</a>
+    <a [routerLink]="'/about'" class="text-lg hover:text-heath-700">Nosotros</a>
+    <a [routerLink]="'/contact'" class="text-lg hover:text-heath-700">Contacto</a>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/login'" class="text-lg hover:text-heath-700">Iniciar sesión</a>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/signupStudent'" class="text-lg hover:text-heath-700">RegistrarS</a>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/signupTeacher'" class="text-lg hover:text-heath-700">RegistrarT</a>
+    <a *ngIf="isLoggedIn" (click)="logout()" class="text-lg hover:text-heath-700 cursor-pointer">Cerrar sesión</a>
+    <button *ngIf="isLoggedIn && user" [routerLink]="'/administrator/profile'" class="px-5 py-2 font-bold text-white uppercase rounded-full bg-heath-900 hover:bg-heath-950">{{ user.username }}</button>
+  </div>
+</nav>

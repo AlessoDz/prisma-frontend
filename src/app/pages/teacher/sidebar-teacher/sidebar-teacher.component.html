@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-action-list class="sidebar">
+        <div mat-subheader>Menu</div>
+        <button routerLink="/teacher" mat-list-item>
+            <mat-icon mat-list-icon>home</mat-icon> Inicio
+        </button>
+        <button mat-list-item routerLink="/teacher/profile">
+            <mat-icon mat-list-icon>account_circle</mat-icon> Perfil
+        </button>
+        <button mat-list-item routerLink="/teacher/cursos">
+            <mat-icon mat-list-icon>list</mat-icon> Cursos
+        </button>
+        <button mat-list-item routerLink="/teacher/horarios">
+            <mat-icon mat-list-icon>list</mat-icon> Cursos
+        </button>
+        <button mat-list-item (click)="logout()">
+            <mat-icon mat-list-icon>logout</mat-icon> Salir
+        </button>
+    </mat-action-list>
+</mat-card>

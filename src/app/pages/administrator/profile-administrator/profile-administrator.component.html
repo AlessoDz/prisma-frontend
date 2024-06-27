@@ -1,0 +1,40 @@
+<mat-card class="profile-card">
+    <h1 class="profile-title">Detalles del perfil</h1>
+    <mat-card-content>
+        <div class="profile-wrapper">
+            <div class="profile-image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Windows_10_Default_Profile_Picture.svg"
+                    alt="Perfil de usuario" class="profile-image">
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">{{ user.name }} {{ user.lastname }}</h1>
+                <table class="profile-table">
+                    <tr>
+                        <td>Nombre de usuario</td>
+                        <td>{{ user.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>{{ user.id_user }}</td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono</td>
+                        <td>{{ user.phone }}</td>
+                    </tr>
+                    <tr>
+                        <td>Rol</td>
+                        <td>{{ user.authorities[0].authority }}</td>
+                    </tr>
+                    <tr>
+                        <td>Estado</td>
+                        <td>{{ user.enabled ? "Activo" : "No activo"}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <mat-card-actions class="profile-actions">
+            <button mat-raised-button color="primary">Editar</button>
+            <button mat-raised-button color="accent">Compartir</button>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>
